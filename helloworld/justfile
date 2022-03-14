@@ -1,0 +1,9 @@
+
+#1 initialize terraform in this directory
+init:
+    terraform init
+
+#format a tf file
+format:
+    terraform fmt
+

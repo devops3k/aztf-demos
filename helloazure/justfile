@@ -1,0 +1,18 @@
+
+#1 initialize terraform in this directory
+init:
+    terraform init
+
+#format a tf file
+format:
+    terraform fmt
+
+#create a tf plan
+plan:
+    terraform plan
+
+#create a tf plan with an output for tf automation
+planout:
+    terraform plan -out=tfplan
+
+#create a 
