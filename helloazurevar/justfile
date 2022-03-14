@@ -17,9 +17,18 @@ plan:
 planout:
     terraform plan -out=tfplan
 
+#create a tf plan that overrides the prefix variable
+planoverride:
+    terraform plan -var 'storage-account-name-prefix=jazz' -out=tfplan
+
 #execute a tf file (will generate a new plan file)
 apply:
     terraform apply
+
+#execute a tf file that overrides prefix
+applyoverride:
+    terraform apply -var 'storage-account-name-prefix=jazz'
+#or you could simply use the tfplan file where you overrode the variable
 
 #execute a tf file with existing tfplan during automation
 applyout:
@@ -39,5 +48,5 @@ statelist:
 
 #show details of a particular resource
 showres:
-    terraform show azurerm_resource_group.demo-res-group
-    terraform show azurerm_storage_account.myfirstaccount
+    terraform state show data.azurerm_resource_group.demo-res-group
+    terraform state show azurerm_storage_account.myfirstaccount
