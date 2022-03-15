@@ -31,7 +31,7 @@ output "rgname" {
 
 # Creating a new storage account
 resource "azurerm_storage_account" "myfirstaccount"{
-    name = "aztfjazzwall"
+    name = "aztfjazzwall22"
     resource_group_name = data.azurerm_resource_group.demo-res-group.name
     location = data.azurerm_resource_group.demo-res-group.location
     account_tier = "Standard"
